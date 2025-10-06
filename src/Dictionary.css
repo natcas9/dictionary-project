@@ -1,3 +1,7 @@
-.Dictionary {
-  background-color: aqua;
+.Dictionary section {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  margin: 20px 0;
 }
