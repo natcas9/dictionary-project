@@ -11,11 +11,6 @@ export default function Dictionary() {
     setResults(response.data[0]);
   }
 
-  function search(keyword) {}
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
-
   function search(event) {
     event.preventDefault();
     // documentation: https://dictionaryapi.dev/e
@@ -30,7 +25,7 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <section>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={search}>
           <input type="search" onChange={handleKeywordChange} />
         </form>
         <div className="hint">suggested words: sunset, wine, yoga</div>
