@@ -3,8 +3,8 @@ import axios from "axios";
 import Results from "./Results";
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  let [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
 
@@ -18,11 +18,6 @@ export default function Dictionary() {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  function load() {
-    setLoaded(true);
-    search();
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -30,6 +25,11 @@ export default function Dictionary() {
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
+  }
+
+  function load() {
+    setLoaded(true);
+    search();
   }
 
   if (loaded) {
@@ -46,5 +46,6 @@ export default function Dictionary() {
     );
   } else {
     load();
+    return "Loading";
   }
 }
