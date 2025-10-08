@@ -1,0 +1,22 @@
+body {
+  background: #f9f8fe;
+}
+
+a {
+  color: #9670f4;
+}
+
+.App {
+  padding: 60px 0 100px;
+  max-width: 960px;
+}
+
+.App .logo {
+  max-width: 200px;
+  display: block;
+  margin: 30px auto;
+}
+
+.App a {
+  color: #6c63ff;
+}
