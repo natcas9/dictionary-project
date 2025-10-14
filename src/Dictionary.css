@@ -26,5 +26,6 @@
 
 .title {
   font-weight: bold;
-  font-size: large;
+  font-size: 40px;
+  text-align: center;
 }
